@@ -1,6 +1,6 @@
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
-Study the code below and explain in your own words why nested function can access the variable internal. */
+Study the code below and explain in your own words why nestedFunction can access the variable internal. */
 
 const external = "I'm outside the function";
 
@@ -16,6 +16,9 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀:
+
+// nestedFunction can go up levels and pull information. in this case, nestedFunction first looks within itsself for 'internal' when it can't find it, it goes up into 'myFunction and
+// finds internal there and is able to execute the line of code.
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -33,7 +36,7 @@ function summation(number) {
     return counter;
 }
 
-console.log("Task 2:", summation(4));
+// console.log("Task 2:", summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -117,7 +120,7 @@ function animalNames(array) {
     return animalArray;
 }
 
-console.log("Request 1:", animalNames(zooAnimals));
+// console.log("Request 1:", animalNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -130,7 +133,7 @@ function lowerCaseNames(array) {
     return array.map((item) => item.animal_name.toLowerCase());
 }
 
-console.log("Request 2:", lowerCaseNames(zooAnimals));
+// console.log("Request 2:", lowerCaseNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -142,7 +145,7 @@ function lowPopulationAnimals(array) {
     return array.filter((item) => item.population < 5);
 }
 
-console.log("Request 3:", lowPopulationAnimals(zooAnimals));
+// console.log("Request 3:", lowPopulationAnimals(zooAnimals));
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -157,7 +160,7 @@ function USApop(array) {
     }, 0);
 }
 
-console.log("Request 4:", USApop(zooAnimals));
+// console.log("Request 4:", USApop(zooAnimals));
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
 /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -193,13 +196,13 @@ function greeting(first, last) {
     return `Hello ${first} ${last}, nice to meet you!`; /*Your Code Here */
 }
 
-console.log(greeting('Dylan', 'Baker'));
+console.log(greeting("Dylan", "Baker"));
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log(consume(2, 2, add)); // 4
-console.log(consume(10, 16, multiply)); // 160
-console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+// console.log(consume(2, 2, add)); // 4
+// console.log(consume(10, 16, multiply)); // 160
+// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
@@ -247,8 +250,8 @@ const cuboid = new CuboidMaker({
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
@@ -278,8 +281,8 @@ const cuboidTwo = new CuboidMakerTwo({
 });
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-console.log(cuboidTwo.volume()); // 100
-console.log(cuboidTwo.surfaceArea()); // 130
+// console.log(cuboidTwo.volume()); // 100
+// console.log(cuboidTwo.surfaceArea()); // 130
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo() {
